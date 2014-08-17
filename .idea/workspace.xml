@@ -23,15 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.json.jbuilder" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/categories/index.json.jbuilder">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="32" selection-start="233" selection-end="233" vertical-scroll-proportion="0.16783217" vertical-offset="0" max-vertical-offset="915">
+            <state line="34" column="29" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
@@ -65,8 +56,16 @@
             <state line="27" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="-7.3636365" vertical-offset="0" max-vertical-offset="510">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1408250227000" expanded="true" signature="719:976" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="9" selection-start="697" selection-end="697" vertical-scroll-proportion="0.5563187" vertical-offset="0" max-vertical-offset="728">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,6 +108,7 @@
         <option value="$PROJECT_DIR$/app/views/categories/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -665,13 +665,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="20" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="285">
@@ -955,16 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="-7.3636365" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1408250227000" expanded="true" signature="719:976" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="32" selection-start="304" selection-end="304" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="675">
@@ -1007,9 +990,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="-7.3636365" vertical-offset="0" max-vertical-offset="510">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="233" selection-end="233" vertical-scroll-proportion="0.16783217" vertical-offset="0" max-vertical-offset="915">
+        <state line="34" column="29" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="697" selection-end="697" vertical-scroll-proportion="0.5563187" vertical-offset="0" max-vertical-offset="728">
           <folding />
         </state>
       </provider>
