@@ -14,10 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require bootstrap-slider.js
 //= require_tree .
 
-
-$( document ).ready(function() {
+//all js in application file due to time constraints (coffee script not compiling (?))....
+$( document ).on('page:change', function() {
   $('.product-color').change(function(){
     var newSrcs = $('select option:selected');
     for (var i = 0; i < 4; i++){
@@ -26,4 +27,14 @@ $( document ).ready(function() {
       img.attr('src', newSrc);
     }
   });
+
+  $('#slider').slider({
+  	formater: function(value) {
+  	  $('#sliderTarget').html('<b>' + value + '</b>');
+    }
+  });
+
+
+
 });
+

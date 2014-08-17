@@ -2,19 +2,20 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <h1>Pick a <%= @product['name']%></h1>
-  <%= image_tag @product['colors'][0]['images'][0]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-0'%>
-  <%= image_tag @product['colors'][0]['images'][1]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-1' %>
-  <%= image_tag @product['colors'][0]['images'][2]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-2' %>
-  <%= image_tag @product['colors'][0]['images'][3]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-3' %>
+  <!--warning below code is a bit messy: it'sahackaton.jpg-->
+  <%= image_tag(@product['colors'][0]['images'][0]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-0') if @product['colors'].present? && @product['colors'][0]['images'][0].present?%>
+  <%= image_tag @product['colors'][0]['images'][1]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-1' if @product['colors'].present? && @product['colors'][0]['images'][1].present?%>
+  <%= image_tag @product['colors'][0]['images'][2]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-2' if @product['colors'].present? && @product['colors'][0]['images'][2].present?%>
+  <%= image_tag @product['colors'][0]['images'][3]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-3' if @product['colors'].present? && @product['colors'][0]['images'][3].present?%>
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4 margin-top product-color">
       <select name="colors" id="product-color" class="form-control input-sm">
           <% Product.get_product_colors(@product).each_with_index do |color, index| %>
             <option value="<%= color %>" id="<%= index %>" class="color"
-              data-src-0="<%= @product['colors'][index]['images'][0]['url'] if @product['colors'][index]['images'].present? %>"
-              data-src-1="<%= @product['colors'][index]['images'][1]['url'] if @product['colors'][index]['images'].present? %>"
-              data-src-2="<%= @product['colors'][index]['images'][2]['url'] if @product['colors'][index]['images'].present? %>"
-              data-src-3="<%= @product['colors'][index]['images'][3]['url'] if @product['colors'][index]['images'].present? %>">
+              data-src-0="<%= @product['colors'][index]['images'][0]['url'] if @product['colors'][index]['images'].present? && @product['colors'][0]['images'][0].present?%>"
+              data-src-1="<%= @product['colors'][index]['images'][1]['url'] if @product['colors'][index]['images'].present? && @product['colors'][0]['images'][1].present? %>"
+              data-src-2="<%= @product['colors'][index]['images'][2]['url'] if @product['colors'][index]['images'].present? && @product['colors'][0]['images'][2].present?%>"
+              data-src-3="<%= @product['colors'][index]['images'][3]['url'] if @product['colors'][index]['images'].present? && @product['colors'][0]['images'][3].present?%>">
               <%= color %>
             </option>
           <% end %>
@@ -25,7 +26,16 @@
   <h6><%= @product['description'] %></h6>
   <p><b>Brand:</b> <%= @product['properties']['brand'] %></p>
   <p><b class="underline">Material</b> <br> <%= @product['properties']['material'].html_safe %></p>
-
+  <div class="row">
+    <p>How many do you plan to order?</p>
+    <input id="slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="200" data-slider-step="5" data-slider-value="100"/>
+    <p id="sliderTarget"></p>
+    <button class="btn btn-sm btn-warning">Get Quote</button>
+    <p >Price per shirt: <span id="price"><%= number_to_currency @price/100  if @price%></span></p>
+    <p >Total price: <span id="totalPrice"><%= number_to_currency @price if @price %> </span></p>
+  </div>
+  <br/><br/>
   <a href="<%= categories_path%>"><button type="button" class="btn btn-default btn-lg">Back to Categories</button></a>
+  <a href="<%= new_design_path query: @product['id'] %>"><button type="button" class="btn btn-success btn-lg">Use this as my perk</button></a>
 
 </div>

@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.get_by_product_id params[:product_id]
+    @price = Product.get_quote params[:product_id], @product['colors'][0]['name'], 100, 'med' if @product['colors'][0]
   end
 
   # GET /products/new
