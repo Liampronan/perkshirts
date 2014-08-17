@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>New order</h1>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <table class="table">
+          <thead>
+            <th>Type</th>
+          </thead>
+          <tbody>
+        <% @products.each do |product| %>
+              <tr>
+                <td><%= product['type'] %></td>
+                <td><%= link_to product['name'], show_products_path(product['categoryId']) %></td>
+              </tr>
+          <% end %>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+    <%= link_to 'Back', orders_path %>
+</div>

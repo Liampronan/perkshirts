@@ -1,0 +1,31 @@
+
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <h1>Pick a <%= @product['name']%></h1>
+  <%= image_tag @product['colors'][0]['images'][0]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-0'%>
+  <%= image_tag @product['colors'][0]['images'][1]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-1' %>
+  <%= image_tag @product['colors'][0]['images'][2]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-2' %>
+  <%= image_tag @product['colors'][0]['images'][3]['url'], class: 'img-rounded product col-sm-2 col-sm-offset-1', id: 'product-img-3' %>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4 margin-top product-color">
+      <select name="colors" id="product-color" class="form-control input-sm">
+          <% Product.get_product_colors(@product).each_with_index do |color, index| %>
+            <option value="<%= color %>" id="<%= index %>" class="color"
+              data-src-0="<%= @product['colors'][index]['images'][0]['url'] if @product['colors'][index]['images'].present? %>"
+              data-src-1="<%= @product['colors'][index]['images'][1]['url'] if @product['colors'][index]['images'].present? %>"
+              data-src-2="<%= @product['colors'][index]['images'][2]['url'] if @product['colors'][index]['images'].present? %>"
+              data-src-3="<%= @product['colors'][index]['images'][3]['url'] if @product['colors'][index]['images'].present? %>">
+              <%= color %>
+            </option>
+          <% end %>
+      </select>
+      </div>
+  </div>
+  <h4><%= @product['comments'] %></h4>
+  <h6><%= @product['description'] %></h6>
+  <p><b>Brand:</b> <%= @product['properties']['brand'] %></p>
+  <p><b class="underline">Material</b> <br> <%= @product['properties']['material'].html_safe %></p>
+
+  <a href="<%= categories_path%>"><button type="button" class="btn btn-default btn-lg">Back to Categories</button></a>
+
+</div>

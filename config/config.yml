@@ -1,0 +1,7 @@
+development:
+  api_key: 765dcd9a44b5b6045b962a1b6b8421f3
+
+test:
+
+production:
+  api_key: 765dcd9a44b5b6045b962a1b6b8421f3 #TODO: update to prod key when going live for orders

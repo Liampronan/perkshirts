@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Pick Your Perk</h1>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <table class="table">
+        <thead>
+        <th>Type</th>
+        </thead>
+        <tbody>
+        <% @categories.each do |category| %>
+            <tr>
+              <td><%= category['type'] %></td>
+              <td><%= link_to category['name'], show_category_path(category['categoryId']) %></td>
+            </tr>
+        <% end %>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+  <%= link_to 'Back', root_path %>
+</div>

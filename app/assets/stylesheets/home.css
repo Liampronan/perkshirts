@@ -1,0 +1,14 @@
+h1.steps{
+    color: black !important;
+}
+
+img.steps{
+    width: 66px;
+    height: 66px
+}
+
+.btn-default:hover{
+    color: white;
+    background-color: #2B2E31;
+    border-color: #00b3fe
+}
